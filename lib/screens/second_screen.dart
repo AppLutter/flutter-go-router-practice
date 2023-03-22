@@ -10,11 +10,30 @@ class SecondScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Center(
-        child: TextButton(
-          onPressed: () {
-            context.go(router.rootScreen);
-          },
-          child: Text('뒤로'),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextButton(
+              onPressed: () {
+                context.go(router.rootScreen);
+              },
+              child: Text('뒤로'),
+            ),
+            const SizedBox(width: 10.0),
+            TextButton(
+              onPressed: () {
+                context.goNamed(router.thirdScreen);
+              },
+              child: Text('세번째'),
+            ),
+            const SizedBox(width: 10.0),
+            TextButton(
+              onPressed: () {
+                context.goNamed(router.shellOneScreen);
+              },
+              child: Text('네번째'),
+            ),
+          ],
         ),
       ),
     );

@@ -7,11 +7,13 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(),
       body: TextButton(
         onPressed: () {
-          context.go(router.secondScreen);
+          context.go('/${router.secondScreen}');
+          // router.MyRouter.route.go(router.secondScreen);
         },
         child: Text('123'),
       ),
